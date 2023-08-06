@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add One row in table</title>
+
+</head>
+
+<body>
+    <h3>Add one row in HTML table</h3>
+    <table id="tbl" border="4" contenteditable="true">
+        <tr>
+            <td>name</td>
+            <td>Address</td>
+
+        </tr>
+    </table>
+    <br>
+    <input type="button" value="ADD row" onclick="funadd()">
+
+    <script>
+        var tbl = document.getElementById("tbl");
+        function funadd() {
+            var r1 = document.createElement("tr");
+            var td = document.createElement("td");
+            var txt = document.createTextNode("test");
+            td.appendChild(txt);
+
+            // var td2 = document.createElement("td");
+            // var txt2 = document.createTextnode("test");
+            // td2.appendChild(txt2);
+
+            // var td3 = document.cret("td");
+            // var txt3 = document.createTextnode("text");
+            // td3.appendChild(txt3);
+
+            r1.appendChild(td);
+            // r1.appendChild(td2);
+            // r1.appendChild(td3);
+        
+
+            tbl.appendChild(r1);
+
+        }
+    </script>
+</body>
+
+</html>
